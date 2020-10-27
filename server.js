@@ -11,6 +11,7 @@ require("./models/mongoose")
 const posts = require('./routes/post')
 const login = require('./routes/login')
 const register = require('./routes/register')
+const likes = require('./routes/like')
 
 
 
@@ -21,8 +22,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //routes
 app.use('/posts', posts)
-// app.use('/login', login)
-// app.use('/register', register)
+app.use('/login', login)
+app.use('/register', register)
+app.use('/like', likes)
 
 
 
